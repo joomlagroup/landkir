@@ -783,7 +783,7 @@ li.html .row, li.html form, li.html select, li.html input {
 
 .sectionAbout {
     min-height: 407px;
-    padding-top: 145px;
+    padding-top: 160px;
     padding-bottom: 95px;
     position: relative;
 }
@@ -817,7 +817,7 @@ li.html .row, li.html form, li.html select, li.html input {
 
 .sectionAbout .content-container1 {
     left: 7vw;
-    top: 70px;
+    top: 95px;
     width: auto;
     position: absolute;
 }
@@ -1240,7 +1240,7 @@ li.html .row, li.html form, li.html select, li.html input {
 
 .wrapSectionJourney {
     position: relative;
-    padding-top: 64px;
+    padding-top: 75px;
     padding-bottom: 64px;
 }
 
