@@ -507,7 +507,7 @@ li.html .row, li.html form, li.html select, li.html input {
 }
 
 .row_header {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0px auto;
     padding: 0px 15px;
 }
@@ -783,7 +783,7 @@ li.html .row, li.html form, li.html select, li.html input {
 
 .sectionAbout {
     min-height: 407px;
-    padding-top: 95px;
+    padding-top: 145px;
     padding-bottom: 95px;
     position: relative;
 }
@@ -811,20 +811,21 @@ li.html .row, li.html form, li.html select, li.html input {
 
 .sectionAbout .about-left .content-container {
     width: 450px;
-    margin: 10px auto 0px auto;
+    margin: 0px auto 0px auto;
     position: relative;
 }
 
-.sectionAbout  .sectionNo {
-    letter-spacing: 4px;
-    color: #4d4e53;
-    border-style: dotted;
-    border-color: transparent;
-    border-width: 1px;
-    width: 50px;
-    height: 50px;
+.sectionAbout .content-container1 {
+    left: 7vw;
+    top: 70px;
+    width: auto;
     position: absolute;
-    left: -75px;
+}
+
+.sectionAbout .content-container {
+    left: 7vw;
+    top: 0px;
+    position: absolute;
 }
 
 .sectionTitleContainer .sectionNo span.small-no {
@@ -1387,6 +1388,9 @@ footer a {
 
 .sliders_about {
     opacity: 0.8;
+    width: 38vw;
+    height: 81vh;
+    overflow: hidden;
 }
 
 .fullpage {
@@ -2071,6 +2075,57 @@ div.paceDiv {
 
     .project-header .control-sliders .prevpost {
         left: 10px;
+    }
+
+    .service_sliders .wrap_item {
+        width: auto;
+    }
+
+    .service_sliders .wrap_item h4 {
+        transform: rotate(-90deg) translateX(-50%);
+        font-size: 20px;
+        top: 78px;
+        left: auto;
+    }
+
+    .service_sliders .wrap_item .sectorService-body {
+        display: none;
+    }
+
+    .service_sliders .wrap_item .readmore {
+        display: none;
+    }
+
+    .service_sliders .wrap_item .img::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+    }
+
+    .sliders_about {
+        width: 100%;
+    }
+
+    .sectionAbout .content-container {
+        left: auto;
+        top: auto;
+    }
+
+    .sectionAbout .content-container1 {
+        left: auto;
+        top: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .sectionAbout {
+        padding-top: 60px;
+    }
+
+    .sectionServices {
+        position: relative;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
 }

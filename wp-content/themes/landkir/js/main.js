@@ -116,7 +116,7 @@ jQuery(document).ready(function($){
         autoplay: true,
         autoplaySpeed: 5000,
         dots: false,
-        slidesToShow: count_slidesToShow
+        slidesToShow: 3
     });
 
     $('.sliders_about').slick({

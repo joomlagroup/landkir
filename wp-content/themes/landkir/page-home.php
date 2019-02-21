@@ -45,6 +45,12 @@ $page_id = $post->ID;
         </div>
         <div class="section " id="aboutPageSection" data-anchor="aboutPage">
             <div class="sectionAbout">
+                <div class="content-container1">
+                    <div class="sectionTitleContainer">
+                        <div class="sectionNo"><span class="small-no">0</span><span class="large-no">1</span></div>
+                        <div class="sectionTitle">giới thiệu</div>
+                    </div>
+                </div>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 about-left">
