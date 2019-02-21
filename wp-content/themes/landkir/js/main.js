@@ -127,7 +127,9 @@ jQuery(document).ready(function($){
         nextArrow: false
     });
 
-    $('.sectionJourney').slick({});
+    $('.sectionJourney').slick({
+        dots: true
+    });
 
 
     $(".sectionJourney").on("beforeChange", function (){

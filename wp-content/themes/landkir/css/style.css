@@ -1801,6 +1801,30 @@ div.paceDiv {
     height: auto !important;
 }
 
+.sectionJourney .slick-dots {
+    bottom: 48px;
+    z-index: 9999;
+}
+
+.sectionJourney .slick-dots li {
+    list-style: none;
+    width: 5px;
+    height: 16px;
+    margin-left: 15px;
+    background-color: #4d4e53;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.sectionJourney .slick-dots li button::before {
+    display: none;
+}
+
+.sectionJourney .slick-dots li.slick-active {
+    background-color: #f2f1f1;
+}
+
+
 .wrap-single-contact .sectionTitleContact .title {
     font-size: 25px;
     float: right;
