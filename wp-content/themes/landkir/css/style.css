@@ -1810,6 +1810,10 @@ div.paceDiv {
     text-transform: uppercase;
 }
 
+.wrap-single-contact .left ul li i {
+    margin-right: 10px;
+}
+
 @media(max-width:767px){
     .menu-mobi-view {display:block;}
     .show-mobile {

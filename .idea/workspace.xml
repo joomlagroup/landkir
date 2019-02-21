@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e1f908-e77e-4def-80bc-434b1d3c3aec" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/landkir/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/landkir/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/landkir/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/landkir/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/landkir/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="942">
-              <caret line="944" column="27" selection-start-line="944" selection-start-column="18" selection-end-line="944" selection-end-column="27" />
+            <state relative-caret-position="157">
+              <caret line="1813" column="22" selection-start-line="1813" selection-start-column="22" selection-end-line="1813" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -51,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/landkir/header.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -155,9 +153,9 @@
         <option value="$PROJECT_DIR$/wp-content/themes/landkir/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/landkir/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/landkir/page-contact.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/landkir/css/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/landkir/js/main.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/landkir/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/landkir/css/style.css" />
       </list>
     </option>
   </component>
@@ -170,7 +168,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -273,12 +271,12 @@
       <workItem from="1550476428611" duration="13123000" />
       <workItem from="1550538615362" duration="24400000" />
       <workItem from="1550626152918" duration="20122000" />
-      <workItem from="1550709080609" duration="12209000" />
+      <workItem from="1550709080609" duration="12347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239815000" />
+    <option name="totallyTimeSpent" value="239953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -590,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/landkir/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="942">
-          <caret line="944" column="27" selection-start-line="944" selection-start-column="18" selection-end-line="944" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/landkir/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -618,6 +609,13 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/landkir/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="1813" column="22" selection-start-line="1813" selection-start-column="22" selection-end-line="1813" selection-end-column="22" />
         </state>
       </provider>
     </entry>
