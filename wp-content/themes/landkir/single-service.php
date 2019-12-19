@@ -9,43 +9,47 @@ $services = new WP_Query( $args );
 <?php include 'header.php' ?>
 <div class="fullpage">
     <div class="wrap-single-service">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5">
-                    <h1 class="serviceNo">
+                <div class="col-md-6">
+                    <div class="left">
+                        <h1 class="serviceNo">
                         <span class="number pull-left">
                             <?php
                             $i=1;
                             while ( $services->have_posts() ) : $services->the_post();
                                 $id = get_the_ID();
                                 if($id==$page_id):
-                                ?>
-                                <span>2.<?php echo $i; ?></span>
+                                    ?>
+                                    <span>2.<?php echo $i; ?></span>
                                 <?php
                                 endif;
                                 $i++;
-                                endwhile;
-                                ?>
+                            endwhile;
+                            ?>
                         </span>
-                        <span class="title pull-left"><?php the_title() ?></span>
-                        <div class="clearfix"></div>
-                    </h1>
-                    <div class="content">
-                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                            <?php the_content(); ?>
-                        <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
-                    <div class="btn_cont">
-                        <div class="btn">
-                            <span>Start your project today</span>
+                            <span class="title pull-left"><?php the_title() ?></span>
+                            <div class="clearfix"></div>
+                        </h1>
+                        <div class="content">
+                            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                <?php the_content(); ?>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
+                        <a href="<?php echo home_url('/lien-he'); ?>">
+                        <div class="btn_cont">
+                            <div class="btn">
+                                <span>Start your project today</span>
+                            </div>
+                        </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-7 list_services">
-                    <img src="http://landkir.co.za/assets/sectors-photos/retail.JPG">
+                <div class="col-md-6 list_services">
+                    <img src="<?php echo the_post_thumbnail_url(); ?>">
                     <div>
-                      <ul>
+                      <ul class="ul_ervices">
                           <?php
                           $args = array( 'post_type' => 'service');
                           $services = new WP_Query( $args );

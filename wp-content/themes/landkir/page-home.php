@@ -147,50 +147,48 @@ $page_id = $post->ID;
 
         <div class="section" id="processesPageSection" data-anchor="processesPage">
             <div class="wrapSectionJourney ">
-                <div class="container">
-                    <div class="row">
-                        <div class="sectionJourney">
-                            <?php
-                            $processes_sliders_home = get_field('processes_sliders_home',$page_id );
-                            if($processes_sliders_home):
-                                foreach ($processes_sliders_home as $key => $processes_sliders):
-                                    $image_url          = $processes_sliders['img'];
-                                    $title              = $processes_sliders['title'];
-                                    $right_text         = $processes_sliders['right_text'];
-                                    $ul_list            = $processes_sliders['ul_list'];
-                                    ?>
-                                    <div class="item item_<?php echo $key+1 ?>" style="background-image: url('<?php echo $image_url ?>');">
+                <div class="oj-container">
+                    <div class="sectionJourney">
+                        <?php
+                        $processes_sliders_home = get_field('processes_sliders_home',$page_id );
+                        if($processes_sliders_home):
+                            foreach ($processes_sliders_home as $key => $processes_sliders):
+                                $image_url          = $processes_sliders['img'];
+                                $title              = $processes_sliders['title'];
+                                $right_text         = $processes_sliders['right_text'];
+                                $ul_list            = $processes_sliders['ul_list'];
+                                ?>
+                                <div class="item item_<?php echo $key+1 ?>" style="background-image: url('<?php echo $image_url ?>');">
 
-                                        <div class="numb_mobile">
-                                            <div class="numb_mobile_left">
-                                                <div class="numb"><?php echo $key+1 ?></div>
-                                                <div class="step"><?php echo $title ?></div>
-                                            </div>
-                                            <div class="numb_mobile_right">
-                                                <?php echo $ul_list ?>
-                                            </div>
-                                            <div class="clearfix"></div>
+                                    <div class="numb_mobile">
+                                        <div class="numb_mobile_left">
+                                            <div class="numb"><?php echo $key+1 ?></div>
+                                            <div class="step"><?php echo $title ?></div>
                                         </div>
-
-                                        <div class="left">
-                                            <h3 class="text-center animated"><?php echo $title ?></h3>
+                                        <div class="numb_mobile_right">
+                                            <?php echo $ul_list ?>
                                         </div>
-                                        <div class="right animated">
-                                            <div class="wrap">
-                                                <?php echo $ul_list ?>
-                                                <?php echo $right_text ?>
-                                            </div>
-                                        </div>
-                                        <div class="number-overlay" style="left: 0px;">
-                                            <div class="black-left"></div>
-                                            <div class="black-number"></div>
-                                            <div class="black-right"></div>
-                                        </div>
-
+                                        <div class="clearfix"></div>
                                     </div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div>
+
+                                    <div class="left">
+                                        <h3 class="text-center animated"><?php echo $title ?></h3>
+                                    </div>
+                                    <div class="right animated">
+                                        <div class="wrap">
+                                            <?php echo $ul_list ?>
+                                            <?php echo $right_text ?>
+                                        </div>
+                                    </div>
+                                    <div class="number-overlay" style="left: 0px;">
+                                        <div class="black-left"></div>
+                                        <div class="black-number"></div>
+                                        <div class="black-right"></div>
+                                    </div>
+
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="diagonalContainer"></div>

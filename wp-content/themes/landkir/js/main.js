@@ -155,7 +155,7 @@ jQuery(document).ready(function($){
     if(window_width<768) {
          sectionClients_count_slidesToShow = 2;
     }
-
+    /*
     $('.sectionClients .sliders').slick({
         autoplay: false,
         dots: false,
@@ -164,7 +164,7 @@ jQuery(document).ready(function($){
         nextArrow: false,
         slidesToScroll: 2
     });
-
+    */
     $('.sectionProjects .sliders').slick({
         autoplay: false,
         dots: false

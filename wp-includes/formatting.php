@@ -2747,17 +2747,19 @@ function wp_rel_nofollow( $text ) {
  */
 function wp_rel_nofollow_callback( $matches ) {
 	$text = $matches[1];
-	$atts = shortcode_parse_atts( $matches[1] );
+	$atts = wp_kses_hair( $matches[1], wp_allowed_protocols() );
 	$rel  = 'nofollow';
 
-	if ( preg_match( '%href=["\'](' . preg_quote( set_url_scheme( home_url(), 'http' ) ) . ')%i', $text ) ||
-	     preg_match( '%href=["\'](' . preg_quote( set_url_scheme( home_url(), 'https' ) ) . ')%i', $text )
-	) {
-		return "<a $text>";
+	if ( ! empty( $atts['href'] ) ) {
+		if ( in_array( strtolower( wp_parse_url( $atts['href']['value'], PHP_URL_SCHEME ) ), array( 'http', 'https' ), true ) ) {
+			if ( strtolower( wp_parse_url( $atts['href']['value'], PHP_URL_HOST ) ) === strtolower( wp_parse_url( home_url(), PHP_URL_HOST ) ) ) {
+				return "<a $text>";
+			}
+		}
 	}
 
 	if ( ! empty( $atts['rel'] ) ) {
-		$parts = array_map( 'trim', explode( ' ', $atts['rel'] ) );
+		$parts = array_map( 'trim', explode( ' ', $atts['rel']['value'] ) );
 		if ( false === array_search( 'nofollow', $parts ) ) {
 			$parts[] = 'nofollow';
 		}
@@ -2766,11 +2768,15 @@ function wp_rel_nofollow_callback( $matches ) {
 
 		$html = '';
 		foreach ( $atts as $name => $value ) {
-			$html .= "{$name}=\"$value\" ";
+			if ( isset( $value['vless'] ) && 'y' === $value['vless'] ) {
+				$html .= $name . ' ';
+			} else {
+				$html .= "{$name}=\"" . esc_attr( $value['value'] ) . '" ';
+			}
 		}
 		$text = trim( $html );
 	}
-	return "<a $text rel=\"$rel\">";
+	return "<a $text rel=\"" . esc_attr( $rel ) . "\">";
 }
 
 /**
@@ -4394,6 +4400,31 @@ function wp_pre_kses_less_than_callback( $matches ) {
 	if ( false === strpos($matches[0], '>') )
 		return esc_html($matches[0]);
 	return $matches[0];
+}
+
+/**
+ * Remove non-allowable HTML from parsed block attribute values when filtering
+ * in the post context.
+ *
+ * @since 5.3.1
+ *
+ * @param string         $string            Content to be run through KSES.
+ * @param array[]|string $allowed_html      An array of allowed HTML elements
+ *                                          and attributes, or a context name
+ *                                          such as 'post'.
+ * @param string[]       $allowed_protocols Array of allowed URL protocols.
+ * @return string Filtered text to run through KSES.
+ */
+function wp_pre_kses_block_attributes( $string, $allowed_html, $allowed_protocols ) {
+	/*
+	 * `filter_block_content` is expected to call `wp_kses`. Temporarily remove
+	 * the filter to avoid recursion.
+	 */
+	remove_filter( 'pre_kses', 'wp_pre_kses_block_attributes', 10 );
+	$string = filter_block_content( $string, $allowed_html, $allowed_protocols );
+	add_filter( 'pre_kses', 'wp_pre_kses_block_attributes', 10, 3 );
+
+	return $string;
 }
 
 /**

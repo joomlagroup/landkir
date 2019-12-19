@@ -8,6 +8,20 @@
     font-family: Roboto-Light;
     src: url(../fonts/roboto-condensed-light_[allfont.net].ttf);
 }
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(../fonts/roboto/Roboto-Thin.ttf);
+}
+p {
+    font-family: Roboto-Thin;
+    color: #f2f1f1;
+    font-size: 17px;
+    line-height: 28px;
+}
+h3{
+    font-family: Roboto-Light;
+    font-size: 25px;
+}
 .font-size-36 {
     font-size: 36px !important;
 }
@@ -615,6 +629,26 @@ li.html .row, li.html form, li.html select, li.html input {
     right: 200px;
 }
 
+.slick-prev:hover{
+    border-color: #000;
+}
+.slick-prev:hover::before{
+    color: #000;
+}
+.slick-prev:hover::after{
+    background-color: #000;
+}
+
+.slick-next:hover{
+    border-color: #000;
+}
+.slick-next:hover::before{
+    color: #000;
+}
+.slick-next:hover::after{
+    background-color: #000;
+}
+
 .slick-prev::before {
     content: "\f061";
     font-family: FontAwesome !important;
@@ -678,6 +712,7 @@ li.html .row, li.html form, li.html select, li.html input {
     word-spacing: 7px;
     letter-spacing: 3px;
     margin-bottom: 30px;
+    font-family: Roboto-Light;
 }
 
 .content_sliders1 p {
@@ -1074,15 +1109,17 @@ li.html .row, li.html form, li.html select, li.html input {
 }
 
 .sectionJourney h3 {
-    font-size: 70px;
+    font-size: 90px;
+    font-weight: 500;
     text-transform: uppercase;
     line-height: 70px;
     position: absolute;
     z-index: 7;
+    font-family: arial;
 }
 
 .sectionJourney h3 .small {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .sectionJourney .right {
@@ -1244,6 +1281,11 @@ li.html .row, li.html form, li.html select, li.html input {
     padding-bottom: 64px;
 }
 
+.oj-container{
+    width: 94vw;
+    margin: 0px auto;
+}
+
 .sectionClients {
     position: relative;
     padding-top: 50px;
@@ -1266,10 +1308,19 @@ li.html .row, li.html form, li.html select, li.html input {
 
 .sectionClients .sliders img {
     width: 100px;
+    margin: auto;
+    display: block;
 }
 
 .sectionClients .sliders {
     margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+.sectionClients .sliders div {
+    width: 184px;
+    margin: 20px 0px;
 }
 
 .sectionProjects {
@@ -1559,6 +1610,11 @@ footer a {
     padding-bottom: 30px;
 }
 
+.wrap-single-service .left {
+    max-width: 546px;
+    margin: 0px auto;
+}
+
 .wrap-single-service h1.serviceNo {
     margin-bottom: 20px;
 }
@@ -1605,6 +1661,17 @@ footer a {
 .wrap-single-service .list_services ul li .serviceNo .small-no{
     font-size: 28px;
     line-height: 28px;
+}
+
+.ul_ervices {
+    margin-top: 40px;
+    display: block;
+}
+
+.ul_ervices::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .wrap-single-contact {
