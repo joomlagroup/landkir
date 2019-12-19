@@ -1553,7 +1553,7 @@ footer a {
     opacity: 1;
     position: absolute;
     right: 18px;
-    top: 13px;
+    top: 14px;
 }
 
 .project-header .control-sliders .nexpost a::after {
@@ -1565,14 +1565,24 @@ footer a {
     background-color: #f2f1f1;
     left: 0px;
 }
+.project-header .control-sliders .nexpost a:hover::before{
+    color: #000;
+}
+.project-header .control-sliders .nexpost a:hover::after {
+    background-color: #000;
+}
 
 .project-header .control-sliders .nexpost a, .project-header .control-sliders .prevpost a {
     border-radius: 50%;
-    border: 2px #f2f1f1 solid;
+    border: 2px solid #f2f1f1;
     width: 50px;
     height: 50px;
     overflow: hidden;
     display: block;
+}
+
+.project-header .control-sliders .nexpost a:hover, .project-header .control-sliders .prevpost a:hover {
+    border-color: #000;
 }
 
 .project-header .control-sliders .prevpost {
@@ -1591,7 +1601,7 @@ footer a {
     opacity: 1;
     position: absolute;
     right: 18px;
-    top: 13px;
+    top: 14px;
 }
 
 .project-header .control-sliders .prevpost a::after {
@@ -1602,6 +1612,12 @@ footer a {
     height: 3px;
     background-color: #f2f1f1;
     right: 0px;
+}
+.project-header .control-sliders .prevpost a:hover::before{
+    color: #000;
+}
+.project-header .control-sliders .prevpost a:hover::after{
+    background-color: #000;
 }
 
 .project-content .content {
