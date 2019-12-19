@@ -1121,6 +1121,9 @@ li.html .row, li.html form, li.html select, li.html input {
 .sectionJourney h3 .small {
     font-size: 70px;
 }
+.sectionJourney h3 .xsmall {
+    font-size: 60px;
+}
 
 .sectionJourney .right {
     width: 50%;
