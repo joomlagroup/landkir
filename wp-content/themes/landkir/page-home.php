@@ -200,7 +200,7 @@ $page_id = $post->ID;
                 <div class="content-container">
                     <div class="sectionTitleContainer">
                         <div class="sectionNo"><span class="small-no">0</span><span class="large-no">3</span></div>
-                        <div class="sectionTitle">Khách Hàng</div>
+                        <div class="sectionTitle"><?php echo $text_clients = get_field('text_clients',$page_id ); ?></div>
                     </div>
                 </div>
                 <div class="container">
@@ -237,51 +237,55 @@ $page_id = $post->ID;
                         <div class="sectionTitle">Các Dự Án</div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="col-12">
+                <div class="container-fluid">
+                    <div class="row">
+
                         <div class="col-sm-12 col-md-10 offset-md-1">
                             <div class="sectionContent">
-                                <p class="text-center">Recent Retail Projects</p>
+                                <!--<p class="text-center">Recent Retail Projects</p>-->
+                                <p class="text-center">&nbsp;</p>
                             </div>
                         </div>
-                        <div class="listProject">
-                            <div class="sliders">
-                                <?php
-                                $array = array('post_type'=>'project','posts_per_page' => 60);
+                        <div class="col-sm-12 col-md-10 offset-md-1">
+                            <div class="listProject">
+                                <div class="sliders">
+                                    <?php
+                                    $array = array('post_type'=>'project','posts_per_page' => 60);
 
-                                $jobs = new WP_Query($array);
-                                $columns = 10;
-                                $count = $jobs->post_count;
-                                $rows = ceil($count / $columns);
-                                if ($jobs->have_posts()) {
-                                    for ($row = 0; $row < $rows; $row++):
-                                        $k = 0;
-                                        echo '<ul class="row_project clearfix">';
-                                        while($jobs->have_posts()) : $jobs->the_post();
-                                            if ($k % $rows == $row):
-                                                $id = get_the_ID();
-                                                ?>
-                                                <li class="">
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <div class="project_item">
-                                                            <img src="<?php echo  the_post_thumbnail_url( 'medium' );  ?>">
-                                                            <h3 class="title text-tranform-upcase animated faster"><?php the_title(); ?></h3>
-                                                            <div class="diagonalImg"></div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            <?php
-                                            endif;
-                                            $k++;
-                                        endwhile;
-                                        echo '</ul>';
-                                    endfor;
-                                } else
+                                    $jobs = new WP_Query($array);
+                                    $columns = 10;
+                                    $count = $jobs->post_count;
+                                    $rows = ceil($count / $columns);
+                                    if ($jobs->have_posts()) {
+                                        for ($row = 0; $row < $rows; $row++):
+                                            $k = 0;
+                                            echo '<ul class="row_project clearfix ">';
+                                            while($jobs->have_posts()) : $jobs->the_post();
+                                                if ($k % $rows == $row):
+                                                    $id = get_the_ID();
+                                                    ?>
+                                                    <li class="my-col1 clr-pad">
+                                                        <a href="<?php the_permalink(); ?>">
+                                                            <div class="project_item">
+                                                                <img src="<?php echo  the_post_thumbnail_url( 'medium' );  ?>">
+                                                                <h3 class="title text-tranform-upcase animated faster"><?php the_title(); ?></h3>
+                                                                <div class="diagonalImg"></div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                <?php
+                                                endif;
+                                                $k++;
+                                            endwhile;
+                                            echo '</ul>';
+                                        endfor;
+                                    } else
 
-                                {
-                                    echo 'None Results';
-                                }
-                                ?>
+                                    {
+                                        echo 'None Results';
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
