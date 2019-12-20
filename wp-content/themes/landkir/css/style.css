@@ -1702,7 +1702,9 @@ footer a {
     display: block;
     clear: both;
 }
-
+.sectionProjects .listProject{
+    margin-top: 40px;
+}
 .wrap-single-contact {
     padding-top: 180px;
     padding-bottom: 90px;

@@ -234,7 +234,7 @@ $page_id = $post->ID;
                 <div class="content-container">
                     <div class="sectionTitleContainer">
                         <div class="sectionNo"><span class="small-no">0</span><span class="large-no">4</span></div>
-                        <div class="sectionTitle">Các Dự Án</div>
+                        <div class="sectionTitle"><?php echo $text_projects = get_field('text_projects',$page_id ); ?></div>
                     </div>
                 </div>
                 <div class="container-fluid">
@@ -242,8 +242,8 @@ $page_id = $post->ID;
 
                         <div class="col-sm-12 col-md-10 offset-md-1">
                             <div class="sectionContent">
-                                <!--<p class="text-center">Recent Retail Projects</p>-->
-                                <p class="text-center">&nbsp;</p>
+                                <p class="text-center"><?php echo $text_below_project = get_field('text_below_project',$page_id ); ?></p>
+
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-10 offset-md-1">
